@@ -1,0 +1,26 @@
+﻿@model CoreDepartmanPersonel.Models.departmanlar
+
+@{
+    ViewData["Title"] = "DepartmanGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<form method="post">
+    <div class="mb-3">
+
+        <label asp-for="departid" class="form-label">Departman ID:</label>
+        <input asp-for="departid" type="text" class="form-control">
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="departmanad" class="form-label">Departman Adı:</label>
+        <input asp-for="departmanad" type="text" class="form-control">
+
+    </div>
+
+
+    <button asp-controller="depart" asp-action="DepartmanGuncelle" type="submit" class="btn btn-primary">Departman Güncelle</button>
+</form>
+

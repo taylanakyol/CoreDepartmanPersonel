@@ -1,0 +1,20 @@
+﻿@model CoreDepartmanPersonel.Models.departmanlar
+
+@{
+    ViewData["Title"] = "YeniDepartman";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<form method="post">
+    <div class="mb-3">
+
+        <label asp-for="departmanad" class="form-label">Departman Adı:</label>
+        <input asp-for="departmanad" type="text" class="form-control">
+
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Departman Ekle</button>
+</form>
+

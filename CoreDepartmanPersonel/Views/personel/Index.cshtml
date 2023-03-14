@@ -1,0 +1,37 @@
+﻿@using CoreDepartmanPersonel.Models
+@model List<personel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<table class="table table-bordered mt-3">
+
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+        <th>Departman</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.perid</td>
+            <td>@item.ad</td>
+            <td>@item.soyad</td>
+            <td>@item.sehir</td>
+            <td>@item.depart.departmanad</td>
+            <td><a asp-controller="personel" asp-action="PersonelSil" asp-route-id="@item.perid" class="btn btn-danger">Sil</a></td>
+            <td><a asp-controller="personel" asp-action="PersonelGetir" asp-route-id="@item.perid" class="btn btn-success">Güncelle</a></td>
+            <td><a href="#" class="btn btn-dark">Detaylar</a></td>
+        </tr>
+    }
+
+</table>
+<a asp-controller="personel" asp-action="YeniPersonel" class="btn btn-secondary">Yeni Personel</a>

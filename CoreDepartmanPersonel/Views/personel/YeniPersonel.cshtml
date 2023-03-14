@@ -1,0 +1,31 @@
+﻿@model CoreDepartmanPersonel.Models.personel
+
+
+@{
+    ViewData["Title"] = "YeniPersonel";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="ad" class="form-label">Personel Adı:</label>
+        <input asp-for="ad" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="soyad" class="form-label">Personel Soyadı:</label>
+        <input asp-for="soyad" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="sehir" class="form-label">Şehir:</label>
+        <input asp-for="sehir" type="text" class="form-control">
+    </div>
+
+    <b>Departman</b>
+    @Html.DropDownListFor(x => x.depart.departid, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+
+    <br />
+
+    <button class="btn btn-primary">Personel Ekle</button>
+</form>
+

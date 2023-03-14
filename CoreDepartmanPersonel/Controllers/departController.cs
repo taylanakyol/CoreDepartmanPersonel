@@ -52,5 +52,18 @@ namespace CoreDepartmanPersonel.Controllers
             return RedirectToAction("Index", "depart");
 
         }
+
+
+        public IActionResult DepartmanDetay(int id)
+        {
+            var degerler = c.personels.Where(x => x.departid == id).ToList();
+            var depad = c.departmanlars.Where(x => x.departid == id).Select(y => y.departmanad).FirstOrDefault();
+            ViewBag.dpad = depad;        
+            return View(degerler);
+
+
+        }
+
+
     }
 }

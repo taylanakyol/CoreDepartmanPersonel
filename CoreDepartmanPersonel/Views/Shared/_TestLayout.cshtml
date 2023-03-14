@@ -16,8 +16,8 @@
     <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
         <h3 class="w3-bar-item">Menüler</h3>
         <a asp-controller="depart" asp-action="index" class="w3-bar-item w3-button">Departmanlar</a>
-        <a href="#" class="w3-bar-item w3-button">Personeller</a>
-        <a href="#" class="w3-bar-item w3-button">Hakkımızda</a>
+        <a asp-controller="personel" asp-action="index" class="w3-bar-item w3-button">Personeller</a>
+        <a asp-controller="Login" asp-action="CikisYap" class="w3-bar-item w3-button">Çıkış</a>
     </div>
 
     <!-- Page Content -->
@@ -27,10 +27,10 @@
             <h1>Departman ve Personel Listeleme Çalışması</h1>
         </div>
 
-        
+
 
         <div class="w3-container">
-            
+
             @RenderBody()
         </div>
 

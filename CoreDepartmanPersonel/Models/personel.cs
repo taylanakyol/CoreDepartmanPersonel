@@ -9,6 +9,7 @@ namespace CoreDepartmanPersonel.Models
         public string ad { get; set; }
         public string soyad { get; set; }
         public string sehir { get; set; }
+        public int departid { get; set; }
 
         public departmanlar depart { get; set; }
     }

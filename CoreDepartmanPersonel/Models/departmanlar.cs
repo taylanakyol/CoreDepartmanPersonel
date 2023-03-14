@@ -7,6 +7,6 @@ namespace CoreDepartmanPersonel.Models
         [Key]
         public int departid { get; set; }
         public string departmanad { get; set; }
-        public List<personel> personels { get; set; }
+        public IList<personel> personels { get; set; }
     }
 }

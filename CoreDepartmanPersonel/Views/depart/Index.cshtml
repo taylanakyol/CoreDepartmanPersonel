@@ -27,7 +27,7 @@
             <td>@item.departmanad</td>
             <td><a asp-controller="depart" asp-action="DepartmanSil" asp-route-id="@item.departid" class="btn btn-danger">Sil</a></td>
             <td><a asp-controller="depart" asp-action="DepartmanGetir" asp-route-id="@item.departid" class="btn btn-success">Güncelle</a></td>
-            <td><a href="#" class="btn btn-dark">Detaylar</a></td>
+            <td><a asp-controller="depart" asp-action="DepartmanDetay" asp-route-id="@item.departid" class="btn btn-dark">Detaylar</a></td>
         </tr>
     }
 

@@ -11,8 +11,8 @@ namespace CoreDepartmanPersonel.Models
         }
 
 
-
         public DbSet<departmanlar> departmanlars { get; set; }
         public DbSet<personel> personels { get; set; }
+        public DbSet<Admin> admins { get; set; }
     }
 }

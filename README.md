@@ -6,4 +6,4 @@ Technologies:
   * C#
   * MSSQL Server
   * Entity Framework Core
-  * Authentication
+  * Cookies Authentication

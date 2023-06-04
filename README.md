@@ -7,3 +7,7 @@ Technologies:
   * MSSQL Server
   * Entity Framework Core
   * Cookies Authentication
+
+**Username: taylana**
+---
+**Password: 12345**
